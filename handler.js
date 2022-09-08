@@ -618,22 +618,7 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-                            let wel = API('hardianto', '/api/welcome3', {
-                                profile: pp,
-                                name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/0c7614657950e02908209.jpg',
-                                namegb: await this.getName(id),
-                                member: groupMetadata.participants.length
-                            })
-                            let lea = API('hardianto', '/api/goodbye3', {
-                                profile: pp,
-                                name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/0c7614657950e02908209.jpg',
-                                namegb: await this.getName(id),
-                                member: groupMetadata.participants.length
-                            })
-                            /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fake,{
+                            await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fake,{
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
     mediaUrl: 'https://Instagram.com/sahrulwara_____',
