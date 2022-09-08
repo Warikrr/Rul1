@@ -637,7 +637,7 @@ module.exports = {
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
     mediaUrl: 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe',
-    mediaType: 1,
+    mediaType: 2,
     description: data.deslink , 
     title: run,
     body: wm,
@@ -737,7 +737,7 @@ Untuk mematikan fitur ini, ketik
     externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.sc,
-    mediaType: 1,
+    mediaType: 2,
     description: data.deslink, 
     title: run,
     body: wm,
