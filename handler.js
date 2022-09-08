@@ -636,8 +636,8 @@ module.exports = {
    await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fake,{
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: 'https://youtu.be/c-06tx4vusw',
-    mediaType: 2,
+    mediaUrl: 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe',
+    mediaType: 1,
     description: data.deslink , 
     title: run,
     body: wm,
@@ -737,7 +737,7 @@ Untuk mematikan fitur ini, ketik
     externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.sc,
-    mediaType: 2,
+    mediaType: 1,
     description: data.deslink, 
     title: run,
     body: wm,
