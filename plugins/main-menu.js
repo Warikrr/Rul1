@@ -21,20 +21,29 @@ const defaultMenu = {
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
+├ YouTube Owner:
+├ https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg
 │
 ├ Note :
 ├ *Ⓟ* = Premium
 ├ *Ⓛ* = Limit
 └────
 %readmore`.trim(),
-  header: '┌─〔 %category 〕',
+  header: '╭──〔 %category 〕─⬣',
   body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+  footer: '╰─────────────⬣\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+╭──〔  THANKS TO  〕─⬣
+⫹⫺ Allah SWT
+⫹⫺ Orang Tua
+⫹⫺ Kesabaran
+⫹⫺ Penyemangat
+⫹⫺ Nurutomo
+⫹⫺ Ilmanhdyt
+⫹⫺ fahriAdishon
+⫹⫺ ArullOfc
+⫹⫺ All Para Suhu
+╰─────────────⬣
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -181,8 +190,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       minute: 'numeric',
       second: 'numeric'
     })
-    const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
-    const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+    const wita = moment.tz('Asia/Kalimantan Selatan').format("HH:mm:ss")
+    const wit = moment.tz('Asia/Kotabaru').format("HH:mm:ss")
     const hariRaya = new Date('January 1, 2023 23:59:59')
     const sekarang = new Date().getTime()
     const Selisih = hariRaya - sekarang
@@ -267,32 +276,20 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     ]
     const listMessage = {
       text: `
-❏ *U S E R   I N F O*
-• Nama    : *${name}*
-• Limit   : *${limit}*
-• Status  : *${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner 🗿' : 'Users ⚔️'}*
-• Premium : *${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}*
-
-❏ *S T A T U S   I N F O*
-• Total User : *${rtotalreg} dari ${totalreg}*
-• Tersisa    : *${limit} Limit*
-• Role       : *${role}*
-• Level      : *${level}*
-
-❏ 𝙏𝙄𝙈𝙀
-» Wib : *${time}*
-» Tanggal : *${week} ${weton} ${date}*
-
-❏ 𝙏𝘼𝙃𝙐𝙉 𝘽𝘼𝙍𝙐
-_*${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik*_
-
-❏ 𝙍𝘼𝙈𝘼𝘿𝘼𝙉
-_*${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik*_
-
-❏ 𝙐𝙇𝘼𝙉𝙂 𝙏𝘼𝙃𝙐𝙉 𝙊𝙒𝙉𝙀𝙍
-_*${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik*_
-
-${pe}Note: Jika ada Fitur yg Error Lapor ke owner${pe}`,
+┏━━〔 ıll *INFO USER* llı 〕━㉿
+⌬ 𝐍𝐚𝐦𝐚     : ${name}
+⌬ 𝐋𝐢𝐦𝐢t     : ${limit}
+⌬ 𝐒𝐭𝐚𝐭𝐮𝐬     : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
+⌬ 𝐏𝐫𝐞𝐦𝐢𝐮𝐦   : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
+┗━━━━━━━━━━━━━㉿
+┏━━〔 ıll *STATUS INFO* llı 〕━㉿
+⌬ 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫  : ${rtotalreg} dari ${totalreg}
+⌬ 𝐓𝐞𝐫𝐬𝐢𝐬𝐚     : ${limit} Limit
+⌬ 𝐑𝐨𝐥𝐞       : ${role}
+⌬ 𝐋𝐞𝐯𝐞𝐥      : *${level}*
+┗━━━━━━━━━━━━━㉿ 
+⫹⫺ TIME : ${time}
+⫹⫺ DATE : ${week} ${weton} ${date}`,
       footer: wm,
       title: judul,
       buttonText: "Klik Disini",
