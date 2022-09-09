@@ -642,7 +642,7 @@ module.exports = {
     title: run,
     body: wm,
     thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
-    sourceUrl: data.linkgc
+    sourceUrl: data.linkig
      }}
   })
                         }
