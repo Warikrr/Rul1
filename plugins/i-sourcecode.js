@@ -7,15 +7,12 @@ let handler = async (m, { conn }) => {
     
     let txt = `
 Nih:
-
-https://youtu.be/IL2PZql859c
-
-Jangan Lupa Subscribe 
-
-My Github: https://github.com/Warikrr
+*https://youtu.be/IL2PZql859c*
+*Jangan Lupa Subscribe*
+*My Github:* https://github.com/Warikrr
 
 `
-     conn.reply(m.chat, txt, m)
+     conn.reply(m.chat, txt, fake)
 }
 handler.help = ['sourcecode']
 handler.tags = ['info']
