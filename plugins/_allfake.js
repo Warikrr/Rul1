@@ -10,7 +10,7 @@ handler.all = async function (m) {
         global.fetch = require('node-fetch')
         const _uptime = process.uptime() * 1000
         const u = await conn.clockString(_uptime)
-        global.run = '𝙍𝙪𝙣𝙩𝙞𝙢𝙚' + ' ' + u
+        global.run = '𝐀𝐤𝐭𝐢𝐟 𝐒𝐞𝐥𝐚𝐦𝐚' + ' ' + u
         global.ucapan = ucapan()
         global.col = 'https://telegra.ph/file/e44b8c524d9b081d3cab0.jpg'
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
@@ -68,7 +68,7 @@ handler.all = async function (m) {
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat  ? 
 	 { remoteJid: "status@broadcast" } : {}) },
-	 message: { "liveLocationMessage": { "caption":"by : The.sad.boy01","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./src/logo.jpg')}}
+	 message: { "liveLocationMessage": { "caption":"by : Arull","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./src/logo.jpg')}}
 	}
         
             const ftoko = {
@@ -86,7 +86,7 @@ key: {
 					"title": wm, //Kasih namalu 
 					"description": data.namabot, 
 					"currencyCode": "USD",
-					"priceAmount1000": "20000000",
+					"priceAmount1000": "2000000000000000",
 					"retailerId": "Ghost",
 					"productImageCount": 1
 				},
