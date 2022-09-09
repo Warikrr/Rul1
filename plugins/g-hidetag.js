@@ -13,7 +13,7 @@ let handler = async (m, { conn, text, participants }) => {
         },
         mentions: await users
       }, {
-        quoted: null,
+        quoted: fake,
         userJid: conn.user.id
       }
     ),
