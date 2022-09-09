@@ -716,6 +716,12 @@ Untuk mematikan fitur ini, ketik
 
 
  global.dfail = async (type, m, conn) => {
+    let im = global.img
+    let wmo = wm
+    let ig = data.linkgc
+    let titl = run
+    let desl = data.deslink
+    let gc = data.linkgc
     let msg = {
         rowner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
         owner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
@@ -723,7 +729,7 @@ Untuk mematikan fitur ini, ketik
         premium: 'Perintah ini hanya untuk member _*Premium*_ !',
         group: 'Perintah ini hanya dapat digunakan di grup!',
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini untuk *Admin* grup!',
+        admin: 'Perintah ini hanya untuk *Admin* grup!',
         botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
         unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
         nsfw: 'NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini!',
@@ -732,18 +738,17 @@ Untuk mematikan fitur ini, ketik
     /*}[type]
     if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
     }[type]
-    if (msg) return conn.sendButtonLoc(m.chat, await conn.resize(fla + 'ACCESS DENIED', 280, 210), msg, wm, 'Menu', '.menu', m, {
+    if (msg) return conn.sendButtonDoc(m.chat, msg, wmo, 'Menu', '.menu', fake, {
   mentions: conn.parseMention(msg),
-  contextInfo: { 
-    externalAdReply :{
+  contextInfo: { externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: data.sc,
+    mediaUrl: gc,
     mediaType: 2,
-    description: data.deslink, 
-    title: run,
-    body: wm,
-    thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: data.sc
+    description: desl, 
+    title: titl,
+    body: wmo,
+    thumbnail: await(await fetch(im)).buffer(),
+    sourceUrl: gc
      }}
   })
 }
