@@ -6,10 +6,12 @@ let handler = async (m, { conn }) => {
     // Kalo ngeyel gk bakal gw up sc lgi.
     
     let txt = `
-Nih:
+*NIH:*
 *https://youtu.be/IL2PZql859c*
 *Jangan Lupa Subscribe*
-*My Github:* https://github.com/Warikrr
+
+*My Github:*
+*https://github.com/Warikrr*
 
 `
      conn.reply(m.chat, txt, fake)
