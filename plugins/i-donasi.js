@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, `
+let handler = async (fake, { conn, usedPrefix }) => conn.sendButton(m.chat, `
 ╭─「 Donasi • Dana 」
 │ • im3 [085822347348]
 │ • axis  [083843192208]
