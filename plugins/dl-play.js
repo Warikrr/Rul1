@@ -24,7 +24,7 @@ let handler = async (m, { conn, command, usedPrefix, text, isPrems, isOwner }) =
   if (yt === false) throw 'semua server gagal'
   if (yt2 === false) throw 'semua server gagal'
   let { dl_link, thumb, title, filesize, filesizeF } = yt
-  await conn.send3ButtonLoc(m.chat, await conn.resize(thumb, 280, 210), m`
+  await conn.send3ButtonLoc(m.chat, await conn.resize(thumb, 280, 210), `
 *Judul:* ${title}
 *Ukuran File Audio:* ${filesizeF}
 *Ukuran File Video:* ${yt2.filesizeF}
