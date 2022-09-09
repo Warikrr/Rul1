@@ -28,7 +28,7 @@ let handler = async (m, { conn }) => {
 ├ ${tag ? '✅' : '❌'} *Anti Tag Owner*
 ├ ${self ? '✅' : '❌'} *Mode Self*
 └────
-    `, m, { contextInfo: { externalAdReply :{
+    `, fake, { contextInfo: { externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.sc,
     mediaType: 2,
