@@ -3,7 +3,7 @@ let handler = async(m, { conn }) => {
 	conn.p = conn.p ? conn.p : {}
 	let id = m.chat
 	conn.p[id] = [
-	await conn.sendKontak(m.chat, data.kontak, m, { contextInfo: { externalAdReply :{
+	await conn.sendKontak(m.chat, data.kontak, fake, { contextInfo: { externalAdReply :{
     showAdAttribution: true,
      }}
   })
