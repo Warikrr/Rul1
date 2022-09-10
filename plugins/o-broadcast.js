@@ -4,7 +4,10 @@ let handler  = async (m, { conn, text }) => {
   for (let id of chats) {
        let bcbg = 'https://telegra.ph/file/b2ae8a0e437e4252d5124.png'
        await conn.delay(1500)
-       await conn.send2Button(id, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', fake)
+       await conn.send2Button(id, text.trim(), wm, 'Menu', '.menu', 'Owner', '.owner', fake, { contextInfo: {
+      externalAdReply :{
+      showAdAttribution: true,
+      }}})
      }
   m.reply('*Broadcast selesai*')
 }
