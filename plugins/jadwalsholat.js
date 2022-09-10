@@ -9,12 +9,6 @@ ${Object.entries(res.today).map(([name, data]) => `*Sholat ${name}:* ${data}`).j
     conn.sendButtonDoc(m.chat, tx, wm, 'Menu', `${usedPrefix}menu`, fake, { contextInfo: { 
 externalAdReply :{
     showAdAttribution: true,
-    title: run,
-    body: wm,
-    mediaType: 2,
-    sourceUrl: data.linkig,
-    mediaUrl: data.linkig,
-    thumbnail: await(await fetch(img)).bufer(),
     }}
   })
 }
