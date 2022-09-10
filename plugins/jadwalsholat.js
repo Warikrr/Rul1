@@ -15,7 +15,9 @@ externalAdReply :{
     sourceUrl: data.linkig,
     mediaUrl: data.linkig,
     thumbnail: await(await fetch(img)).bufer(),
-    }}})
+    }}
+  })
+
 handler.help = ['salat <daerah>']
 handler.tags = ['quran']
 handler.command = /^(jadwal)?s(a|o|ha|ho)lat$/i
