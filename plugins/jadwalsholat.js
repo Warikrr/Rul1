@@ -17,6 +17,7 @@ externalAdReply :{
     thumbnail: await(await fetch(img)).bufer(),
     }}
   })
+}
 
 handler.help = ['salat <daerah>']
 handler.tags = ['quran']
