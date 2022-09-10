@@ -633,7 +633,7 @@ module.exports = {
                                 member: groupMetadata.participants.length
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'ArullBotz', fake,{
+   await conn.send2ButtonDoc(id, text, wm, action == 'add' ? 'selamat datang','Menu' : 'sampai jumpa', 'Menu', action === 'add' ? '.intro', '.menu' : 'ArullBotz', fake,{
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     showAdAttribution: true,
