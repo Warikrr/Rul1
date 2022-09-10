@@ -3,6 +3,7 @@ let axios = require('axios')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
  // let url = `https://api.lolhuman.xyz/api/tiktokwm?apikey=9b817532fadff8fc7cb86862&url=${args[0]}`
+    let res = (await axios.get(API('males', '/tiktok', { url: args[0] } ))).data;
     m.reply(data.wait)
 await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
   contextInfo: { mentionedJid: [m.sender],
@@ -17,8 +18,7 @@ await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
     sourceUrl: data.sc
      }}
   })
-let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
-    await conn.send2ButtonVid(m.chat, `https://api.lolhuman.xyz/api/tiktokwm?apikey=9b817532fadff8fc7cb86862&url=${args[0]}` , txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, m)
+    conn.send2ButtonVid(m.chat, res.video, wm, 'No Wm', '.tiktoknowm ${args[0]}', 'Audio', '.tiktokaudio ${args[0]}', m)
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
