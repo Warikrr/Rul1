@@ -634,7 +634,7 @@ module.exports = {
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro', : 'FokusID')*/
    await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'ArullBotz', fake,{
-  contextInfo: {mentionedJid: [user],
+  contextInfo: { mentionedJid: [user],
     externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.linkig,
