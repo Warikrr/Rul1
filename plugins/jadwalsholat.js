@@ -8,7 +8,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
 ${Object.entries(res.today).map(([name, data]) => `*Sholat ${name}:* ${data}`).join('\n').trim()}`
     conn.sendButtonDoc(m.chat, tx, wm, 'Menu', `${usedPrefix}menu`, m, { contextInfo :{
     showAdAttribution: true,
-    }
+    }}
   })
 }
 
