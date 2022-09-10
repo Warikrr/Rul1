@@ -633,7 +633,7 @@ module.exports = {
                                 member: groupMetadata.participants.length
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.send2ButtonDoc(id, text, wm, action == 'add' ? 'selamat datang','Menu' : 'sampai jumpa', 'Menu', action === 'add' ? '.intro', '.menu' : 'ArullBotz', fake,{
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'ArullBotz', fake,{
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     showAdAttribution: true,
@@ -718,10 +718,10 @@ Untuk mematikan fitur ini, ketik
  global.dfail = async (type, m, conn) => {
     let im = global.img
     let wmo = wm
-    let ig = data.linkgc
+    let ig = data.linkig
     let titl = run
     let desl = data.deslink
-    let gc = data.linkgc
+    let gc = data.linkig
     let msg = {
         rowner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
         owner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
@@ -738,7 +738,7 @@ Untuk mematikan fitur ini, ketik
     /*}[type]
     if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
     }[type]
-    if (msg) return conn.sendButtonDoc(m.chat, msg, wmo, 'Menu', '.menu', fake, {
+    if (msg) return conn.send2ButtonDoc(m.chat, msg, wmo, 'Menu', '.menu', 'Owner', '.owner', fake, {
   mentions: conn.parseMention(msg),
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
@@ -748,7 +748,7 @@ Untuk mematikan fitur ini, ketik
     title: run,
     body: wmo,
     thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: gc
+    sourceUrl: ig
      }}
   })
 }
