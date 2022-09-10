@@ -642,7 +642,7 @@ module.exports = {
     description: data.deslink , 
     title: run,
     body: wm,
-    thumbnail: await(await fetch(img)).buffer(),
+    thumbnail: await(await fetch(pp)).buffer(),
     sourceUrl: data.linkig
      }}
   })
