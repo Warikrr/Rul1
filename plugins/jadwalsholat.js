@@ -6,7 +6,8 @@ let handler = async (m, { text, usedPrefix, command }) => {
     let tx = `Jadwal Sholat *${text}*
 
 ${Object.entries(res.today).map(([name, data]) => `*Sholat ${name}:* ${data}`).join('\n').trim()}`
-    conn.sendButtonDoc(m.chat, tx, wm, 'Menu', `${usedPrefix}menu`, m, { contextInfo :{
+    conn.sendButtonDoc(m.chat, tx, wm, 'Menu', `${usedPrefix}menu`, m, { contextInfo: {
+externalAdReply :{
     showAdAttribution: true,
     }}
   })
