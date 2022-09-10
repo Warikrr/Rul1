@@ -295,9 +295,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       buttonText: "Klik Disini",
       sections
     }
-    return conn.sendMessage(m.chat, listMessage, { quoted: fake, mentions: await conn.parseMention(judul), { contextInfo: { externalAdReply :{ showAdAttribution: true }}})
-    
-    }
+    return conn.sendMessage(m.chat, listMessage, { quoted: fake, { contextInfo: { externalAdReply :{
+    externalAdReply :{
+    showAdAttribution: true,
+    }}}}})
 
     let groups = {}
     for (let tag in tags) {
