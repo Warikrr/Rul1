@@ -637,13 +637,13 @@ module.exports = {
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: data.linkgc,
+    mediaUrl: data.linkig,
     mediaType: 2,
     description: data.deslink , 
     title: run,
     body: wm,
-    thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
-    sourceUrl: data.linkgc
+    thumbnail: await(await fetch(img)).buffer(),
+    sourceUrl: data.linkig
      }}
   })
                         }
@@ -742,12 +742,12 @@ Untuk mematikan fitur ini, ketik
   mentions: conn.parseMention(msg),
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: gc,
+    mediaUrl: ig,
     mediaType: 2,
     description: desl, 
-    title: titl,
+    title: run,
     body: wmo,
-    thumbnail: await(await fetch(im)).buffer(),
+    thumbnail: await(await fetch(img)).buffer(),
     sourceUrl: gc
      }}
   })
