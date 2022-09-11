@@ -4,7 +4,14 @@ let handler = async (m, { jid, conn, usedPrefix, command, isOwner }) => {
 let fetch = require('node-fetch')
     let chats = Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned)
     let users = Object.entries(global.db.data.users).filter(user => user[1].banned)
-    let caption = `${readMore}
+    conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
 ╭─「 Chat Terbanned 」
 │✇ Total : ${chats.length} Chat${chats ? '\n' + chats.map(([jid], i) => `
 │• ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : db.data.chats[jid].name}
@@ -18,8 +25,11 @@ let fetch = require('node-fetch')
 │• ${isOwner ? '@' + jid.split`@`[0] : jid}
 `.trim()).join('\n') : ''}
 ╰────
-`.trim()
-    conn.sendButtonLoc(m.chat, col, caption, wm, `Menu`, `${usedPrefix}menu`, m, { contextInfo: { mentionedJid: conn.parseMention(caption) }, mentions: await conn.parseMention(caption) })
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
 }
 handler.help = ['bannedlist']
 handler.tags = ['info']
