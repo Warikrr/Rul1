@@ -16,7 +16,7 @@ let handler = async (m, { conn }) => {
       requestFrom: m.sender,
       noteMessage: {
       extendedTextMessage: {
-      text: '
+      text: `
       ┌─〔 Status 〕
       ├ Aktif selama ${uptime}
       ├ *${groups.length}* Grup
@@ -35,7 +35,7 @@ let handler = async (m, { conn }) => {
       ├ ${tag ? '✅' : '❌'} *Anti Tag Owner*
       ├ ${self ? '✅' : '❌'} *Mode Self*
       └────
-      ',  
+      `,  
       contextInfo: {
       externalAdReply: {
       showAdAttribution: true
