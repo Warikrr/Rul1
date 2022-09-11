@@ -1,5 +1,5 @@
 let handler = async(m, { conn }) => {
-  await conn.sendButtonVid(m.chat, pickRandom(asupan), 'asupan.mp4', '', 'Next', '.asupan', m)
+  await conn.sendButtonVid(m.chat, pickRandom(asupan), '*Nih Kak*', '', 'Next', '.asupan', m)
 }
 handler.help = ['asupan']
 handler.tags = ['asupan']
@@ -14,7 +14,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.register = true
+handler.register = false
 
 module.exports = handler
 
