@@ -2,13 +2,12 @@ let fetch = require('node-fetch')
 let axios = require('axios')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
-         res.json = `https://api.lolhuman.xyz/api/tiktok3?apikey=7facd6f11077ee4daecd55d5&url=${args[0]}`
-    let json = await res.json()
-    
+ // let url = `https://api.lolhuman.xyz/api/tiktok?apikey=7facd6f11077ee4daecd55d5&url=${args[0]}`
     m.reply(data.wait)
 await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
   contextInfo: { mentionedJid: [m.sender],
     externalAdReply :{
+    showAdAttribution: true,
     mediaUrl: data.sc,
     mediaType: 2,
     description: data.deslink , 
@@ -19,11 +18,20 @@ await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
      }}
   })
 let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
-    await conn.sendButtonVid(m.chat, `https://api.lolhuman.xyz/api/tiktok3?apikey=7facd6f11077ee4daecd55d5&url=${args[0]}`, txt, wm, `Audio`, `.tiktokaudio ${args[0]}`, m)
+    await conn.send2ButtonVid(m.chat, `https://api.lolhuman.xyz/api/tiktok?apikey=7facd6f11077ee4daecd55d5&url=${args[0]}` , txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, m, { contextInfo: {
+    externalAdReply :{
+    showAdAttribution: true,
+    title: run,
+    body: wm,
+    mediaUrl: data.linkig,
+    source: data.deslink,
+    mediaType: 2,
+    thumbnail: await(await fetch(img)).buffer(),   
+    }}
+    })
 }
-handler.help = ['tiktoknowm'].map(v => v + ' <url>')
+handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tt|tiktok)nowm(dl)?(download(er)?)?$/i
 
-
+handler.command = /^(tiktoknowm)$/i
 module.exports = handler
