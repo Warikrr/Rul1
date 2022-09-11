@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
       requestFrom: m.sender,
       noteMessage: {
       extendedTextMessage: {
-      text: 'diyt Banyak Bwang',
+      text: 'diyt Banyak Bwang\nyang ini private',
       contextInfo: {
       externalAdReply: {
       showAdAttribution: true
