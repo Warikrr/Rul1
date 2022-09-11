@@ -1,19 +1,31 @@
 let handler = async m => {
 
-let krtu = `Kartu Intro`
-m.reply(`
+conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: `
 0ཻུ۪۪ꦽꦼ̷⸙‹•══════════════♡᭄
 │       *「 Kartu Intro 」*
 │ *Nama     :* 
 │ *Gender   :* 
-│ *Umur      :* 
+│ *Umur     :* 
 │ *Hobby    :* 
-│ *Kelas      :* 
-│ *Asal         :* 
+│ *Kelas    :* 
+│ *Asal     :* 
 │ *Agama    :* 
- |  *Status     :* 
+| *Status   :* 
 ╰═════ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙
-`.trim()) // Tambah sendiri kalo mau
+wa.me/arull
+`,
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
+
 }
 handler.command = /^(intro)$/i
 
