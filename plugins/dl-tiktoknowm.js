@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let axios = require('axios')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
-let res = await fetch(API('lol', '/api/tiktok', { url: args[0] }, 'apikey'))
+let res = await fetch(API('lol', '/api/tiktok', { url: args[0] }, '7facd6f11077ee4daecd55d5'))
     let json = await res.json()
     
     m.reply(data.wait)
