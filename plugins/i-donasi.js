@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix }) => 
+let handler = async (m, { conn, usedPrefix }) => { 
       conn.relayMessage(m.chat,  {
     requestPaymentMessage: {
       currencyCodeIso4217: 'INR',
