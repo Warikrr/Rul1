@@ -9,36 +9,37 @@ let handler = async (m, { conn }) => {
     let uptime = clockString(_uptime)
 
 
-    conn.reply(m.chat, `
-┌─〔 Status 〕
-├ Aktif selama ${uptime}
-├ *${groups.length}* Grup
-├ *${chats.length - groups.length}* Chat Pribadi
-├ *${Object.keys(global.db.data.users).length}* Pengguna
-├ ${block == undefined ? '*0* Diblokir' : '*' + block.length + '* Diblokir'}
-├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
-├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
-└────
-┌─〔 Pengaturan 〕
-├ ${anon ? '✅' : '❌'} *Anon Chat*
-├ ${anticall ? '✅' : '❌'} *Anti Call*
-├ ${backup ? '✅' : '❌'} *Auto Backup DB*
-├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
-├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
-├ ${tag ? '✅' : '❌'} *Anti Tag Owner*
-├ ${self ? '✅' : '❌'} *Mode Self*
-└────
-    `, fake, { contextInfo: { externalAdReply :{
-    showAdAttribution: true,
-    mediaUrl: data.sc,
-    mediaType: 2,
-    description: data.deslink, 
-    title: run,
-    body: wm,
-    thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: data.sc
-     }}
-  })
+      conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: '
+      ┌─〔 Status 〕
+      ├ Aktif selama ${uptime}
+      ├ *${groups.length}* Grup
+      ├ *${chats.length - groups.length}* Chat Pribadi
+      ├ *${Object.keys(global.db.data.users).length}* Pengguna
+      ├ ${block == undefined ? '*0* Diblokir' : '*' + block.length + '* Diblokir'}
+      ├ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
+      ├ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
+      └────
+      ┌─〔 Pengaturan 〕
+      ├ ${anon ? '✅' : '❌'} *Anon Chat*
+      ├ ${anticall ? '✅' : '❌'} *Anti Call*
+      ├ ${backup ? '✅' : '❌'} *Auto Backup DB*
+      ├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
+      ├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
+      ├ ${tag ? '✅' : '❌'} *Anti Tag Owner*
+      ├ ${self ? '✅' : '❌'} *Mode Self*
+      └────
+      ',  
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
 }
 handler.help = ['stats']
 handler.tags = ['about']
