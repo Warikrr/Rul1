@@ -1,12 +1,11 @@
-let handler = async (m, { conn, usedPrefix }) => 
-conn.relayMessage(m.chat,  {
+let handler = async (m, { conn, usedPrefix }) => conn.relayMessage(m.chat, {
     requestPaymentMessage: {
       currencyCodeIso4217: 'INR',
       amount1000: 1339889,
       requestFrom: m.sender,
       noteMessage: {
       extendedTextMessage: {
-      text: "
+      text: '
 ╭─「 Donasi • Dana 」
 │ • im3 [085822347348]
 │ • axis  [083843192208]
@@ -18,8 +17,7 @@ conn.relayMessage(m.chat,  {
 │ _Hasil donasi akan digunakan buat sewa_
 │ _atau beli *RDP/VPS* agar bot bisa jalan_
 │ _24jam tanpa kendala_
-╰────
-",
+╰──── ',
       contextInfo: {
       externalAdReply: {
       showAdAttribution: true
