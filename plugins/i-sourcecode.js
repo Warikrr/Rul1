@@ -14,14 +14,13 @@ let handler = async (m, { conn }) => {
 *https://github.com/Warikrr*
 
 `
-     conn.relayMessage(m.chat, {
+     conn.relayMessage(m.chat, txt,  {
     requestPaymentMessage: {
       currencyCodeIso4217: 'RP',
       amount1000: 2000000000000000000,
       requestFrom: m.sender,
       noteMessage: {
       extendedTextMessage: {
-      text: text.trim(),
       contextInfo: {
       externalAdReply: {
       showAdAttribution: true
