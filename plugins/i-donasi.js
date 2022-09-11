@@ -6,7 +6,7 @@ conn.relayMessage(m.chat,  {
       requestFrom: m.sender,
       noteMessage: {
       extendedTextMessage: {
-      text: '
+      text: `
 ╭─「 Donasi • Dana 」
 │ • im3 [085822347348]
 │ • axis  [083843192208]
@@ -19,7 +19,7 @@ conn.relayMessage(m.chat,  {
 │ _atau beli *RDP/VPS* agar bot bisa jalan_
 │ _24jam tanpa kendala_
 ╰────
-',
+`,
       contextInfo: {
       externalAdReply: {
       showAdAttribution: true
