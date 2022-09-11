@@ -1,4 +1,12 @@
-let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, `
+let handler = async (m, { conn, usedPrefix }) => 
+conn.relayMessage(m.chat,  {
+    requestPaymentMessage: {
+      currencyCodeIso4217: 'INR',
+      amount1000: 1339889,
+      requestFrom: m.sender,
+      noteMessage: {
+      extendedTextMessage: {
+      text: '
 ╭─「 Donasi • Dana 」
 │ • im3 [085822347348]
 │ • axis  [083843192208]
@@ -11,7 +19,12 @@ let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, `
 │ _atau beli *RDP/VPS* agar bot bisa jalan_
 │ _24jam tanpa kendala_
 ╰────
-`.trim(), wm, 'Menu', usedPrefix + 'menu', fake) // Tambah sendiri kalo mau
+',
+      contextInfo: {
+      externalAdReply: {
+      showAdAttribution: true
+      }}}}}}, {})
+}
 handler.help = ['donasi']
 handler.tags = ['about']
 handler.command = /^dona(te|si)$/i
