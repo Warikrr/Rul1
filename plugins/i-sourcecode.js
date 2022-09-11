@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
 *https://github.com/Warikrr*
 
 `
-     conn.relayMessage(m.chat, txt, {
+     conn.relayMessage(m.chat, {
     requestPaymentMessage: {
       currencyCodeIso4217: 'RP',
       amount1000: 2000000000000000000,
