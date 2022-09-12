@@ -718,10 +718,10 @@ Untuk mematikan fitur ini, ketik
  global.dfail = async (type, m, conn) => {
     let im = global.img
     let wmo = wm
-    let ig = data.linkig
+    let ig = data.sc
     let titl = run
     let desl = data.deslink
-    let gc = data.linkig
+    let gc = data.sc
     let msg = {
         rowner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
         owner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
@@ -742,13 +742,13 @@ Untuk mematikan fitur ini, ketik
   mentions: conn.parseMention(msg),
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: ig,
+    mediaUrl: sc,
     mediaType: 2,
     description: desl, 
     title: run,
     body: wmo,
     thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: ig
+    sourceUrl: sc
      }}
   })
 }
