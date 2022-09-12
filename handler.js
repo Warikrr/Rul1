@@ -269,12 +269,12 @@ module.exports = {
                     if (!('antispam' in chat)) chat.antispam = true
                     if (!('antitroli' in chat)) chat.antitroli = false
                     if (!('antivirtex' in chat)) chat.antivirtex = false
-                    if (!('viewonce' in chat)) chat.viewonce = true
+                    if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('nsfw' in chat)) chat.nsfw = false
                     if (!('simi' in chat)) chat.simi = false
                     if (!('clear' in chat)) chat.clear = false
                     if (!isNumber(chat.cleartime)) chat.clearTime = 0 
-                    if (!('antitag' in chat)) chat.antitag = false
+                    if (!('antitag' in chat)) chat.antitag = true
                 } else global.db.data.chats[m.chat] = {
                     name: this.getName(m.chat),
                     closeGroup: false,
@@ -297,7 +297,7 @@ module.exports = {
                     antispam: true,
                     antitroli: false,
                     antivirtex: false,
-                    viewonce: true,
+                    viewonce: false,
                     nsfw: false,
                     simi: false,
                     clear: false,
