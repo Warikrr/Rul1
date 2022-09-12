@@ -738,17 +738,17 @@ Untuk mematikan fitur ini, ketik
     /*}[type]
     if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
     }[type]
-    if (msg) return conn.send2ButtonDoc(m.chat, msg, wmo, 'Menu', '.menu', 'Owner', '.owner', fake, {
+    if (msg) return conn.send2ButtonDoc(m.chat, msg, data.nambot, 'Menu', '.menu', 'Owner', '.owner', fake, {
   mentions: conn.parseMention(msg),
   contextInfo: { externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: sc,
+    mediaUrl: data.sc,
     mediaType: 2,
     description: desl, 
     title: run,
-    body: wmo,
+    body: wm,
     thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: sc
+    sourceUrl: data.sc,
      }}
   })
 }
