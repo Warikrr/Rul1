@@ -295,39 +295,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       buttonText: "Klik Disini",
       sections
     }
-    return conn.sendButton(m.chat, '
-let tags
-  let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'rpg', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'anime', 'nsfw', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'asupan', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
-  if (!arrayMenu.includes(teks)) teks = '404'
-  if (teks == 'all') tags = {
-    'main': 'UTAMA',
-    'game': 'Game',
-    'rpg': 'RPG',
-    'xp': 'Exp & Limit',
-    'sticker': 'Stiker',
-    'kerang': 'Kerang Ajaib',
-    'quotes': 'Quotes',
-    'group': 'Grup',
-    'anime': 'Anime',
-    'nsfw': 'Nsfw',
-    'premium': 'Premium',
-    'internet': 'Internet',
-    'anonymous': 'Anonymous Chat',
-    'nulis': 'MagerNulis & Logo',
-    'downloader': 'Downloader',
-    'tools': 'Tools',
-    'fun': 'Fun',
-    'asupan': 'Asupan',
-    'database': 'Database',
-    'vote': 'Voting',
-    'absen': 'Absen',
-    'quran': 'Al Qur\'an',
-    'audio': 'Pengubah Suara',
-    'jadibot': 'Jadi Bot',
-    'info': 'Info',
-    '': 'Tanpa Kategori',
-  }', data.namabot, 'Menu', '.menu', fake, { contextInfo: { externalAdReply :{ showAdAttribution: true, }}})
+    return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
     
     }
 
