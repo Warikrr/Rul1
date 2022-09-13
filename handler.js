@@ -703,27 +703,31 @@ Untuk mematikan fitur ini, ketik
         premium: 'Perintah ini hanya untuk member _*Premium*_ !',
         group: 'Perintah ini hanya dapat digunakan di grup!',
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
+        admin: 'Perintah ini untuk *Admin* grup!',
         botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
         unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
         nsfw: 'NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini!',
         rpg: 'RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini!',
         restrict: 'Fitur ini di *disable*!'
+    /*}[type]
+    if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
     }[type]
-    if (msg) return conn.send2ButtonDoc(m.chat, msg, data.nambot, 'Menu', '.menu', 'Owner', '.owner', m, {
+    if (msg) return conn.send2ButtonDoc(m.chat, msg, wm, 'Menu', '.menu', 'Owner', '.owner', m, {
   mentions: conn.parseMention(msg),
-  contextInfo: { externalAdReply :{
+  contextInfo: { 
+    externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.sc,
     mediaType: 2,
-    description: desl, 
+    description: '', 
     title: 'Hay Kak',
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
-    sourceUrl: data.sc,
+    sourceUrl: data.sc
      }}
   })
 }
+
 
 let fs = require('fs')
 let chalk = require('chalk')
