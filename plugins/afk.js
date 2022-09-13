@@ -5,7 +5,7 @@ let handler = async(m, { conn, usedPrefix, text }) => {
     user.afkReason = text
     conn.sendButtonLoc(m.chat, `
 ${conn.getName(m.sender)} sekarang AFK${text ? ': ' + text : ''}
-`, wm, m)
+`, 'Oke', 'ok', wm, m)
 }
 handler.help = ['afk <reason>']
 handler.tags = ['main']
