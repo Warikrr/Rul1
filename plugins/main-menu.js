@@ -21,30 +21,27 @@ const defaultMenu = {
 │
 ├ Uptime: *%uptime (%muptime)*
 ├ Database: %rtotalreg dari %totalreg
+│
 ├ Note :
 ├ *Ⓟ* = Premium
 ├ *Ⓛ* = Limit
 └────
 %readmore`.trim(),
-  header: '╭──〔 %category 〕─⬣',
+  header: '┌─〔 %category 〕',
   body: '├ %cmd %islimit %isPremium',
-  footer: '╰─────────────⬣\n',
+  footer: '└────\n',
   after: `
-╭──〔  THANKS TO  〕─⬣
-⫹⫺ Allah SWT
-⫹⫺ Orang Tua
-⫹⫺ Kesabaran
-⫹⫺ Penyemangat
-⫹⫺ Nurutomo
-⫹⫺ Ilmanhdyt
-⫹⫺ fahriAdishon
-⫹⫺ ArullOfc
-⫹⫺ All Para Suhu
-╰─────────────⬣
+*%npmname@^%version*
+${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
-let tags
+
+  let tags
+  let teks = `${args[0]}`.toLowerCase()
+  let arrayMenu = ['all', 'game', 'rpg', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'anime', 'nsfw', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'asupan', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
+  if (!arrayMenu.includes(teks)) teks = '404'
+  if (teks == 'all') tags = {
     'main': 'UTAMA',
     'game': 'Game',
     'rpg': 'RPG',
@@ -71,7 +68,87 @@ let tags
     'jadibot': 'Jadi Bot',
     'info': 'Info',
     '': 'Tanpa Kategori',
- } 
+  }
+  if (teks == 'game') tags = {
+    'game': 'Game'
+  }
+  if (teks == 'xp') tags = {
+    'xp': 'Exp & Limit'
+  }
+  if (teks == 'rpg') tags = {
+    'rpg': 'RPG'
+  }
+  if (teks == 'stiker') tags = {
+    'sticker': 'Stiker'
+  }
+  if (teks == 'kerangajaib') tags = {
+    'kerang': 'Kerang Ajaib'
+  }
+  if (teks == 'quotes') tags = {
+    'quotes': 'Quotes'
+  }
+  if (teks == 'grup') tags = {
+    'group': 'Grup'
+  }
+  if (teks == 'anime') tags = {
+    'anime': 'Anime'
+  }
+  if (teks == 'nsfw') tags = {
+    'nsfw': 'Nsfw'
+  }
+  if (teks == 'premium') tags = {
+    'premium': 'Premium'
+  }
+  if (teks == 'internet') tags = {
+    'internet': 'Internet'
+  }
+  if (teks == 'anonymous') tags = {
+    'anonymous': 'Anonymous Chat'
+  }
+  if (teks == 'nulis') tags = {
+    'nulis': 'MagerNulis & Logo'
+  }
+  if (teks == 'downloader') tags = {
+    'downloader': 'Downloader'
+  }
+  if (teks == 'tools') tags = {
+    'tools': 'Tools'
+  }
+  if (teks == 'fun') tags = {
+    'fun': 'Fun'
+  }
+  if (teks == 'asupan') tags = {
+    'asupan': 'Asupan'
+  }
+  if (teks == 'database') tags = {
+    'database': 'Database'
+  }
+  if (teks == 'vote') tags = {
+    'vote': 'Voting',
+    'absen': 'Absen'
+  }
+  if (teks == 'quran') tags = {
+    'quran': 'Al Qur\'an'
+  }
+  if (teks == 'audio') tags = {
+    'audio': 'Pengubah Suara'
+  }
+  if (teks == 'jadibot') tags = {
+    'jadibot': 'Jadi Bot'
+  }
+  if (teks == 'info') tags = {
+    'info': 'Info'
+  }
+  if (teks == 'tanpakategori') tags = {
+    '': 'Tanpa Kategori'
+  }
+  if (teks == 'owner') tags = {
+    'owner': 'Owner',
+    'host': 'Host',
+    'advanced': 'Advanced'
+  }
+
+
 
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
@@ -102,8 +179,8 @@ let tags
       minute: 'numeric',
       second: 'numeric'
     })
-    const wita = moment.tz('Asia/Kalimantan Selatan').format("HH:mm:ss")
-    const wit = moment.tz('Asia/Kotabaru').format("HH:mm:ss")
+    const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
+    const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
     const hariRaya = new Date('January 1, 2023 23:59:59')
     const sekarang = new Date().getTime()
     const Selisih = hariRaya - sekarang
@@ -151,7 +228,70 @@ let tags
         enabled: !plugin.disabled,
       }
     })
+    if (teks == '404') {
+      let judul = `${ucapan()}, ${name}`.trim()
+      const sections = [
+      {
+        title: 'List Menu ' + data.namabot,
+        rows: [
+          { title: 'Semua Perintah', rowId: `${_p + command} all` },
+          { title: 'Game', rowId: `${_p + command} game` },
+          { title: 'Rpg', rowId: `${_p + command} rpg` },
+          { title: 'XP', rowId: `${_p + command} xp` },
+          { title: 'Stiker', rowId: `${_p + command} stiker` },
+          { title: 'Kerang Ajaib', rowId: `${_p + command} kerangajaib` },
+          { title: 'Quotes', rowId: `${_p + command} quotes` },
+          { title: 'Grup', rowId: `${_p + command} grup` },
+          { title: 'Anime', rowId: `${_p + command} anime` },
+          { title: 'Nsfw', rowId: `${_p + command} nsfw` },
+          { title: 'Premium', rowId: `${_p + command} premium` },
+          { title: 'Internet', rowId: `${_p + command} internet` },
+          { title: 'Anonymous', rowId: `${_p + command} anonymous` },
+          { title: 'Nulis & Logo', rowId: `${_p + command} nulis` },
+          { title: 'Downloader', rowId: `${_p + command} downloader` },
+          { title: 'Tools', rowId: `${_p + command} tools` },
+          { title: 'Fun', rowId: `${_p + command} fun`},
+          { title: 'Asupan', rowId: `${_p + command} asupan`},
+          { title: 'Database', rowId: `${_p + command} database` },
+          { title: 'Vote & Absen', rowId: `${_p + command} vote` },
+          { title: "Al-Qur\'an", rowId: `${_p + command} quran` },
+          { title: 'Pengubah Suara', rowId: `${_p + command} audio` },
+          { title: 'Jadi Bot', rowId: `${_p + command} jadibot` },
+          { title: 'Info', rowId: `${_p +command} info` },
+          { title: 'Tanpa Kategori', rowId: `${_p + command} tanpakategori` },
+          { title: 'Owner', rowId: `${_p + command} owner` },
+        ]
+      }
+    ]
+    const listMessage = {
+      text: `
+┏━━〔 ıll *INFO USER* llı 〕━㉿
+⌬ 𝐍𝐚𝐦𝐚     : ${name}
+⌬ 𝐋𝐢𝐦𝐢t     : ${limit}
+⌬ 𝐒𝐭𝐚𝐭𝐮𝐬     : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
+⌬ 𝐏𝐫𝐞𝐦𝐢𝐮𝐦   : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
+┗━━━━━━━━━━━━━㉿
+┏━━〔 ıll *STATUS INFO* llı 〕━㉿
+⌬ 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫  : ${rtotalreg} dari ${totalreg}
+⌬ 𝐓𝐞𝐫𝐬𝐢𝐬𝐚     : ${limit} Limit
+⌬ 𝐑𝐨𝐥𝐞       : ${role}
+⌬ 𝐋𝐞𝐯𝐞𝐥      : *${level}*
+┗━━━━━━━━━━━━━㉿ 
+⫹⫺ TIME : ${time}
+⫹⫺ DATE : ${week} ${weton} ${date}`,
+      footer: wm,
+      title: judul,
+      buttonText: "Klik Disini",
+      sections
+    }
+    return conn.sendMessage(m.chat, listMessage, { quoted: fake, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
     
+    }
+
+
+    let groups = {}
+    for (let tag in tags) {
+      groups[tag] = []
       for (let plugin of help)
         if (plugin.tags && plugin.tags.includes(tag))
           if (plugin.help) groups[tag].push(plugin)
@@ -196,7 +336,7 @@ let tags
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    return conn.send3TemplateButtonImg(m.chat, await genProfile(conn, m), text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}donasi`, m)
+    await conn.send3TemplateButtonImg(m.chat, await genProfile(conn, m), text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
