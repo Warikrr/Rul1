@@ -4,7 +4,7 @@ conn.sendButtonVid(m.chat, vid, '(~‾▿‾)~', wm, 'Next', `${usedPrefix + com
 }
 handler.help = ['asupan']
 handler.tags = ['fun']
-
+handler.premium = true,
 handler.command = /^(asupan)$/i
 
 module.exports = handler
