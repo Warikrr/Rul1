@@ -25,7 +25,7 @@ let handler = async (m, { conn, args }) => {
         mediaUrl: data.sc,
         mediaType: 2,
         description: data.deslink, 
-        title: run,
+        title: 'Nih Kak TTS nya',
         body: wm,
         thumbnail: bg,
         sourceUrl: data.sc
