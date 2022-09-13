@@ -9,6 +9,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['geayubi']
 handler.tags = ['asupan']
+handler.premium = true,
 handler.command = /^(geayubi)$/i
 //MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS
 module.exports = handler
