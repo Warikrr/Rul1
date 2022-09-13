@@ -6,7 +6,7 @@ handler.tags = ['asupan']
 handler.command = /^asupanloli$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.private = false
 
 handler.admin = false
