@@ -8,7 +8,7 @@ externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.sc,
     mediaType: 2,
-    sourceUrl: data sc,
+    sourceUrl: data.sc,
     title: run,
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
