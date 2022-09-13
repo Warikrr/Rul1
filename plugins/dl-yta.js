@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
         externalAdReply: {
             showAdAttribution: true,
             mediaUrl: `${args}`,
-            title: `${title}`, 
+            title: 'Nih Kak Audionya', 
             body: wm,
             description: wm,
             mediaType: 2,
