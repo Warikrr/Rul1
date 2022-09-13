@@ -619,6 +619,10 @@ module.exports = {
                                 (chat.sBye || this.bye || conn.bye || 'Selamat tinggal'))
                                 this.send2ButtonImg(id, pp, text, "𝐆𝐫𝐨𝐮𝐩 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐁𝐲 𝐀𝐫𝐮𝐥𝐥", "Scrip Bot", ".sc", 'Tampilan Menu', '.menu', fake, { contextInfo: { externalAdReply :{
                                 showAdAttribution: true,
+                                mediaUrl: data.sc,
+                                mediaType: 2,
+                                sourceUrl: data.sc,
+                                title: action === 'add' ? 'Semoga Betah Yah Kak🤗' : 'Yah Kok Keluar Sih😩',
                                 }}})
                                 }
                     }
