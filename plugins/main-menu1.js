@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 let moment = require('moment-timezone')
-const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
-    const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+const wita = moment.tz('Asia/Jakarta').format("HH:mm:ss")
+    const wit = moment.tz('Asia/Jakarta').format("HH:mm:ss")
     const hariRaya = new Date('January 1, 2023 23:59:59')
     const sekarang = new Date().getTime()
     const Selisih = hariRaya - sekarang
