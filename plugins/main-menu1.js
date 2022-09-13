@@ -9,7 +9,7 @@ externalAdReply :{
     mediaUrl: data.sc,
     mediaType: 2,
     sourceUrl: data.sc,
-    title: run,
+    title: 'Jangan Dispam Ya Kak',
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
 }}})
