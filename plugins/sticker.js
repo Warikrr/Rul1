@@ -34,7 +34,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args }) => {
     mediaUrl: data.sc,
     mediaType: 2,
     description: data.deslink, 
-    title: run,
+    title: 'Nih Stickernya Kak',
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
     sourceUrl: data.sc
