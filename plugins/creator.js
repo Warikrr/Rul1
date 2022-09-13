@@ -5,11 +5,17 @@ let handler = async(m, { conn }) => {
 	conn.p[id] = [
 	await conn.sendKontak(m.chat, data.kontak, fake, { contextInfo: { externalAdReply :{
     showAdAttribution: true,
+    mediaUrl: data.sc,
+    mediaType: 2,
+    body: wm,
+    title: run,
+    sourceUrl: data.sc,
+    thumbnail: await(await fetch(img)).buffer,()
      }}
   })
 	]
 	await delay(100)
-  return conn.sendMessage(m.chat, { text: `Hay kak @${m.sender.split('@')[0]}, itu nomor ownerku jangan dispam yah ^_^`, mentions: [m.sender] }, { quoted: conn.p[id][0]
+  return conn.sendButton(m.chat, { text: `Hay kak @${m.sender.split('@')[0]}, itu nomor ownerku jangan dispam yah ^_^`, mentions: [m.sender] }, 'Tampilan Menu', '.menu', { quoted: conn.p[id][0]
   })
   await delay(100)
   return delete conn.p[id]
