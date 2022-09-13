@@ -11,7 +11,7 @@ await conn.reply(m.chat, `Downloading media from Tiktok`, 0, {
     mediaUrl: data.sc,
     mediaType: 2,
     description: data.deslink , 
-    title: run,
+    title: 'Tunggu Sebentar',
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
     sourceUrl: data.sc
@@ -21,7 +21,7 @@ let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.
     await conn.send2ButtonVid(m.chat, `https://api.lolhuman.xyz/api/tiktokwm?apikey=85faf717d0545d14074659ad&url=${args[0]}` , txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, m, { contextInfo: {
     externalAdReply :{
     showAdAttribution: true,
-    title: run,
+    title: 'Nih Kak Video Tiktoknya',
     body: wm,
     mediaUrl: data.linkig,
     source: data.deslink,
