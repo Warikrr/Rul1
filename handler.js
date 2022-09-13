@@ -637,13 +637,6 @@ module.exports = {
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: data.linkyt,
-    mediaType: 2,
-    description: data.deslink , 
-    title: run,
-    body: wm,
-    thumbnail: await(await fetch(pp)).buffer(),
-    sourceUrl: data.linkyt
      }}
   })
                         }
