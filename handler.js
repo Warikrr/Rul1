@@ -696,12 +696,6 @@ Untuk mematikan fitur ini, ketik
 
 
  global.dfail = async (type, m, conn) => {
-    let im = global.img
-    let wmo = wm
-    let ig = data.sc
-    let titl = run
-    let desl = data.deslink
-    let gc = data.sc
     let msg = {
         rowner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
         owner: 'Perintah ini hanya dapat digunakan oleh _*Team Bot Discussion!1!1!*_',
@@ -725,7 +719,7 @@ Untuk mematikan fitur ini, ketik
     mediaUrl: data.sc,
     mediaType: 2,
     description: desl, 
-    title: run,
+    title: 'Hay Kak',
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
     sourceUrl: data.sc,
