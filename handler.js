@@ -709,7 +709,7 @@ Untuk mematikan fitur ini, ketik
         nsfw: 'NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini!',
         rpg: 'RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini!',
         restrict: 'Fitur ini di *disable*!'
-    /*}[type]
+    }[type]
     if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
     }[type]
     if (msg) return conn.send2ButtonDoc(m.chat, msg, data.nambot, 'Menu', '.menu', 'Owner', '.owner', m, {
