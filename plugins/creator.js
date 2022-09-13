@@ -10,7 +10,7 @@ let handler = async(m, { conn }) => {
     body: wm,
     title: run,
     sourceUrl: data.sc,
-    thumbnail: await(await fetch(img)).buffer,()
+    thumbnail: await(await fetch(img)).buffer(),
      }}
   })
 	]
