@@ -12,6 +12,7 @@ externalAdReply :{
     title: run,
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
+}}})
 }
 
 handler.help = ['menu']
