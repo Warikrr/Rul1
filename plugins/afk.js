@@ -3,9 +3,9 @@ let handler = async(m, { conn, usedPrefix, text }) => {
     let img = 'https://telegra.ph/file/630a9a34ab2859888ec36.jpg'
     user.afk = + new Date
     user.afkReason = text
-    conn.sendTemplateButtonLoc(m.chat, img, `
+    conn.sendButtonLoc(m.chat, `
 ${conn.getName(m.sender)} sekarang AFK${text ? ': ' + text : ''}
-`, wm,)
+`, wm, m)
 }
 handler.help = ['afk <reason>']
 handler.tags = ['main']
