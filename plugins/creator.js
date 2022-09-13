@@ -8,7 +8,7 @@ let handler = async(m, { conn }) => {
     mediaUrl: data.sc,
     mediaType: 2,
     body: wm,
-    title: run,
+    title: 'Nih My Owner',
     sourceUrl: data.sc,
     thumbnail: await(await fetch(img)).buffer(),
      }}
