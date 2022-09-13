@@ -710,8 +710,6 @@ Untuk mematikan fitur ini, ketik
         rpg: 'RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini!',
         restrict: 'Fitur ini di *disable*!'
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, { mentions: conn.parseMention(msg) })*/
-    }[type]
     if (msg) return conn.send2ButtonDoc(m.chat, msg, data.nambot, 'Menu', '.menu', 'Owner', '.owner', m, {
   mentions: conn.parseMention(msg),
   contextInfo: { externalAdReply :{
