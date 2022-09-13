@@ -15,8 +15,8 @@ let handler = async(m, { conn }) => {
   })
 	]
 	await delay(100)
-  return conn.sendButton(m.chat, { text: `Hay kak @${m.sender.split('@')[0]}, itu nomor ownerku jangan dispam yah ^_^`, mentions: [m.sender] }, 'Tampilan Menu', '.menu', { quoted: conn.p[id][0]
-  })
+  return conn.sendButton(m.chat, { text: `Hay kak @${m.sender.split('@')[0]}, itu nomor ownerku jangan dispam yah ^_^`, mentions: [m.sender] }, { quoted: conn.p[id][0]
+  }, 'Tampilan Menu', '.menu')
   await delay(100)
   return delete conn.p[id]
 }
