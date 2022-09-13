@@ -632,8 +632,8 @@ module.exports = {
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
-                                /*await this.reply(id, text, wm, fake)*/
-   await conn.reply(id, text, wm, fake,{
+                                /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fake,{
   contextInfo: { externalAdReply :{
                                   showAdAttribution: true,
                                   mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
