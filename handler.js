@@ -621,23 +621,30 @@ module.exports = {
                             let wel = API('hardianto', '/api/welcome3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/a36809ab7862a77d18ac0.jpg',
+                                bg: 'https://telegra.ph/file/0c7614657950e02908209.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
                             let lea = API('hardianto', '/api/goodbye3', {
                                 profile: pp,
                                 name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/a36809ab7862a77d18ac0.jpg',
+                                bg: 'https://telegra.ph/file/0c7614657950e02908209.jpg',
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
-                            /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
+                                /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
    await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fake,{
   contextInfo: { externalAdReply :{
-    showAdAttribution: true,
-     }}
-  })
+                                  showAdAttribution: true,
+                                  mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
+                                  mediaType: 2,
+                                  description: '', 
+                                  title: action === 'add' ? 'Semoga Betah ツ' : 'Selamat Tinggal ツ',
+                                  body: data.namabot,
+                                  thumbnail: await(await fetch(pp)).buffer(),
+                                  sourceUrl: ''
+                              }}
+                           })           
                         }
                     }
                 }
