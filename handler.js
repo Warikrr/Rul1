@@ -632,18 +632,18 @@ module.exports = {
                                 namegb: await this.getName(id),
                                 member: groupMetadata.participants.length
                             })
-                            /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'ArullBotz', fake, {
+                            /*await this.send2ButtonDoc(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang', 'Menu' : 'sampai jumpa', 'Menu', action === 'add' ? '.intro', '.menu', : 'ArullBotz', '.menu', fake, {
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     showAdAttribution: true,
-    mediaUrl: data.linkig,
+    mediaUrl: data.linkyt,
     mediaType: 2,
     description: data.deslink , 
     title: run,
     body: wm,
     thumbnail: await(await fetch(pp)).buffer(),
-    sourceUrl: data.linkig
+    sourceUrl: data.linkyt
      }}
   })
                         }
