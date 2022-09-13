@@ -278,7 +278,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ⌬ 𝐋𝐞𝐯𝐞𝐥      : *${level}*
 ┗━━━━━━━━━━━━━㉿ 
 ⫹⫺ TIME : ${time}
-⫹⫺ DATE : ${week} ${weton} ${date}`,
+⫹⫺ DATE : ${date}`,
       footer: wm,
       title: judul,
       buttonText: "Klik Disini",
