@@ -7,6 +7,7 @@ conn.sendButtonImg(m.chat,data.url, pincpt, wm, `Next`, `.pinterest ${args}`, m)
 }
 handler.help = ['pinterest <keyword>']
 handler.tags = ['internet']
+handler.premium = true,
 handler.command = /^(pin(terest)?)$/i
 
 module.exports = handler
