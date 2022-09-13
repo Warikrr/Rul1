@@ -638,7 +638,7 @@ module.exports = {
     externalAdReply :{
     showAdAttribution: true,
     mediaUrl: data.linkig,
-    mediaType: "FOTO",
+    mediaType: 2,
     description: data.deslink , 
     title: run,
     body: wm,
