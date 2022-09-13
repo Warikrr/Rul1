@@ -274,31 +274,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         ]
       }
     ]
-    const listMessage = {
-      text: `
-┏━━〔 ıll *INFO USER* llı 〕━㉿
-⌬ 𝐍𝐚𝐦𝐚     : ${name}
-⌬ 𝐋𝐢𝐦𝐢t     : ${limit}
-⌬ 𝐒𝐭𝐚𝐭𝐮𝐬     : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
-⌬ 𝐏𝐫𝐞𝐦𝐢𝐮𝐦   : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
-┗━━━━━━━━━━━━━㉿
-┏━━〔 ıll *STATUS INFO* llı 〕━㉿
-⌬ 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫  : ${rtotalreg} dari ${totalreg}
-⌬ 𝐓𝐞𝐫𝐬𝐢𝐬𝐚     : ${limit} Limit
-⌬ 𝐑𝐨𝐥𝐞       : ${role}
-⌬ 𝐋𝐞𝐯𝐞𝐥      : *${level}*
-┗━━━━━━━━━━━━━㉿ 
-⫹⫺ TIME : ${time}
-⫹⫺ DATE : ${week} ${weton} ${date}`,
-      footer: wm,
-      title: judul,
-      buttonText: "Klik Disini",
-      sections
-    }
-    return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
     
-    }
-
     let groups = {}
     for (let tag in tags) {
       groups[tag] = []
