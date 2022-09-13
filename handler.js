@@ -617,13 +617,13 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Yah,si Beban Masuk Grup @user').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc.toString()) :
                                 (chat.sBye || this.bye || conn.bye || 'Sip, Beban Berkurang @user!')).replace('@user', '@' + user.split('@')[0])
-                                this.send2ButtonImg(id, pp, text, "𝐆𝐫𝐨𝐮𝐩 𝐌𝐞𝐬𝐬𝐚𝐠𝐞 𝐁𝐲 𝐀𝐫𝐮𝐥𝐥", "Scrip Bot", ".sc", 'Tampilan Menu', '.menu', fake, { contextInfo: { externalAdReply :{
+                                this.reply(id, pp, text, fake, { contextInfo: { externalAdReply :{
                                 showAdAttribution: true,
                                 mediaUrl: data.linkgc,
                                 mediaType: 2,
                                 sourceUrl: data.linkgc,
                                 body: data.namabot,
-                                thumbnail: await(await fetch (img)).buffer(),
+                                thumbnail: await(await fetch (pp)).buffer(),
                                 title: action === 'add' ? 'Semoga Betah Yah Kak🤗' : 'Yah Kok Keluar Sih😩',
                                 }}})
                                 }
