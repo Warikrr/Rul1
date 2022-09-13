@@ -17,7 +17,7 @@ handler.all = async function (m) {
                 this.spam[m.sender].spam = 0
                 this.spam[m.sender].lastspam = new Date * 1
                 //global.db.data.users[m.sender].banned = true
-                let a = "https://telegra.ph/file/e43f05b8dd939c7fa74e0.png"
+                let a = "https://telegra.ph/file/4fa576e739ddbef61ceb6.mp4"
   conn.sendStimg(m.chat, a, m, {packname: packname, author: author, 
   contextInfo: { mentionedJid: [m.sender],
     externalAdReply :{
@@ -25,7 +25,7 @@ handler.all = async function (m) {
     mediaUrl: data.sc,
     mediaType: 2,
     description: data.deslink , 
-    title: run,
+    title: 'Jangan Spam Anyingg🙄',
     body: wm,
     thumbnail: await(await fetch(img)).buffer(),
     sourceUrl: data.sc
