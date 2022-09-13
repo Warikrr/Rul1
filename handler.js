@@ -721,7 +721,7 @@ Untuk mematikan fitur ini, ketik
     mediaType: 2,
     description: '', 
     title: 'Hay Kak',
-    body: wm,
+    body: 'Join Gc Bot Kak',
     thumbnail: await(await fetch(img)).buffer(),
     sourceUrl: data.sc
      }}
