@@ -1,6 +1,5 @@
 /**
-* jangan dihapus/diganti ya kontol
-* lu itu cuma make jadi jangan diapa apain ya bangsat
+* Kalo Eror Tqto nya Perbaiki aja
 * mending lu tambahin deh nama lu jangan hapus kreditnya
 **/
 
