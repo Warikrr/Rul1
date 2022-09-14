@@ -1,19 +1,19 @@
-# Raxcel-bot MD
+# ArullBotz
 
 ---
 
-<a href="https://visitor-badge.glitch.me/badge?page_id=Kangsad01/bot-md"><img title="Visitor" src="https://visitor-badge.glitch.me/badge?page_id=Kangsad01/bot-md"></a>
-<a href="https://github.com/sadteams/bot-md/network/members"><img title="Forks" src="https://img.shields.io/github/forks/sadteams/bot-md?label=Forks&color=blue&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/sadteams/bot-md?label=Watchers&color=green&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/sadteams/bot-md?label=Stars&color=yellow&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/graphs/contributors"><img title="Contributors" src="https://img.shields.io/github/contributors/sadteams/bot-md?label=Contributors&color=blue&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/issues"><img title="Issues" src="https://img.shields.io/github/issues/sadteams/bot-md?label=Issues&color=success&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/sadteams/bot-md?label=Issues&color=red&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/sadteams/bot-md?label=PullRequest&color=success&style=flat-square"></a>
-<a href="https://github.com/sadteams/bot-md/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/sadteams/bot-md?label=PullRequest&color=red&style=flat-square"></a>
+<a href="https://visitor-badge.glitch.me/badge?page_id=Warikrr/Rul1"><img title="Visitor" src="https://visitor-badge.glitch.me/badge?page_id=Warikrr/Rul1"></a>
+<a href="https://github.com/Warikrr/Rul1/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Warikrr/Rul1?label=Forks&color=blue&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/Warikrr/Rul1?label=Watchers&color=green&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/Warikrr/Rul1?label=Stars&color=yellow&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/graphs/contributors"><img title="Contributors" src="https://img.shields.io/github/contributors/Warikrr/Rul1?label=Contributors&color=blue&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/issues"><img title="Issues" src="https://img.shields.io/github/issues/Warikrr/Rul1?label=Issues&color=success&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/Warikrr/Rul1?label=Issues&color=red&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/sadteams/bot-md?label=PullRequest&color=success&style=flat-square"></a>
+<a href="https://github.com/Warikrr/Rul1/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/Warikrr/Rul1?label=PullRequest&color=red&style=flat-square"></a>
 
 ## Join Group Diskusi
-[![BOT DISCUSSION GROUP](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/Fm6gRtvuCDN9abXVlfekAK) 
+[![BOT DISCUSSION GROUP](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/LHfAOQ4sa2g40Bu5sXDWva) 
 **NO BOT**
 
 
@@ -89,8 +89,8 @@ $ apt update && upgrade -y
 $ pkg install ffmpeg
 $ pkg install nodejs-lts
 $ pkg install git
-$ git clone https://github.com/sadteams/bot-md
-$ cd bot-md
+$ git clone https://github.com/Warikrr/Rul1
+$ cd Rul1
 $ npm i
 $ node .
 ```
@@ -199,3 +199,4 @@ conn.logger.level = 'debug'
 [![bot xtrehse](https://github.com/xtreshebot.png?size=100)](https://github.com/xtreshebot)
 [![Madexyz](https://github.com/Madexyz.png?size=100)](https://github.com/Madexyz)
 [![sadteams](https://github.com/sadteams.png?size=100)](https://github.com/sadteams)
+[![Warikrr](https://github.com/Warikrr.png?size=100)](https://github.com/Warikrr)
