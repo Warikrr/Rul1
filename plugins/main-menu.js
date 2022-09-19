@@ -10,21 +10,11 @@ const defaultMenu = {
 ┌─〔 %me 〕
 ├ *${ucapan()} %name*
 │
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-│
-├ Note :
-├ *Ⓟ* = Premium
-├ *Ⓛ* = Limit
+├ 𝗧𝗲𝗿𝘀𝗶𝘀𝗮 %limit Limit
+├ 𝗧𝗮𝗻𝗴𝗴𝗮𝗹: %week %weton, %date
+├ 𝗪𝗮𝗸𝘁𝘂: %time
+├ 𝗨𝗽𝘁𝗶𝗺𝗲: *%uptime (%muptime)*
+├ 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲: MongoDB
 └────
 %readmore`.trim(),
   header: '┌─〔 %category 〕',
@@ -265,20 +255,20 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     ]
     const listMessage = {
       text: `
-┏━━〔 ıll *INFO USER* llı 〕━㉿
-⌬ 𝐍𝐚𝐦𝐚     : ${name}
-⌬ 𝐋𝐢𝐦𝐢t     : ${limit}
-⌬ 𝐒𝐭𝐚𝐭𝐮𝐬     : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
-⌬ 𝐏𝐫𝐞𝐦𝐢𝐮𝐦   : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
-┗━━━━━━━━━━━━━㉿
-┏━━〔 ıll *STATUS INFO* llı 〕━㉿
-⌬ 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫  : ${rtotalreg} dari ${totalreg}
-⌬ 𝐓𝐞𝐫𝐬𝐢𝐬𝐚     : ${limit} Limit
-⌬ 𝐑𝐨𝐥𝐞       : ${role}
-⌬ 𝐋𝐞𝐯𝐞𝐥      : *${level}*
-┗━━━━━━━━━━━━━㉿ 
-⫹⫺ TIME : ${time}
-⫹⫺ DATE : ${date}`,
+     ıll *INFO USER* llı 
+ 𝐍𝐚𝐦𝐚     : ${name}
+ 𝐋𝐢𝐦𝐢t     : ${limit}
+ 𝐒𝐭𝐚𝐭𝐮𝐬     : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
+ 𝐏𝐫𝐞𝐦𝐢𝐮𝐦   : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
+
+     ıll *STATUS INFO* llı 〕
+ 𝐓𝐨𝐭𝐚𝐥 𝐔𝐬𝐞𝐫  : ${rtotalreg} dari ${totalreg}
+ 𝐓𝐞𝐫𝐬𝐢𝐬𝐚     : ${limit} Limit
+ 𝐑𝐨𝐥𝐞       : ${role}
+ 𝐋𝐞𝐯𝐞𝐥      : *${level}*
+
+⏰ TIME : ${time}
+🗓 DATE : ${date}`,
       footer: wm,
       title: judul,
       buttonText: "Klik Disini",
@@ -336,7 +326,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, await genProfile(conn, m), text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}donasi`, m)
+    await conn.send3TemplateButtonImg(m.chat, await genProfile(conn, m), text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖Dashboard`, `${_p}dashboard`, `🎗  Donasi  🎗`, `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
