@@ -271,7 +271,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 🗓 DATE : ${date}`,
       footer: wm,
       title: judul,
-      buttonText: "Klik Disini",
+      buttonText: "Tap!",
       sections
     }
     return conn.sendMessage(m.chat, listMessage, { quoted: fake, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
